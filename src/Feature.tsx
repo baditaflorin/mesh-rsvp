@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import {
+  MeshNameInput,
   PersonalQR,
   makeScanPayload,
   type MeshConfig,
@@ -167,10 +168,10 @@ function Body({ room, config }: { room: YRoom; config: MeshConfig }) {
 
       <section>
         <h2 className="viral-section-title">your reply</h2>
-        <input
+        <MeshNameInput
           className="viral-name"
           value={name}
-          onChange={(e) => setName(e.target.value)}
+          onChange={setName}
           placeholder="your name"
           maxLength={48}
         />
