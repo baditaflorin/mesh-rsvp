@@ -105,6 +105,10 @@ function Body({ room, config }: { room: YRoom; config: MeshConfig }) {
           <strong>{totalAttending}</strong> attending · {yes.length} yes · {maybe.length} maybe ·{" "}
           {no.length} no
         </p>
+        <p className="viral-hint">
+          Share the invite QR (or open this page in another tab). Everyone in the same room sees
+          replies update live — no sign-up, no server.
+        </p>
       </header>
 
       <section>
@@ -219,6 +223,7 @@ function Body({ room, config }: { room: YRoom; config: MeshConfig }) {
             ✗ no
           </button>
         </div>
+        {!name.trim() && <p className="viral-hint">Enter your name to reply.</p>}
       </section>
 
       <section>
