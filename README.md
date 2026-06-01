@@ -4,7 +4,9 @@
 [![version](https://img.shields.io/badge/version-0.1.1-blue)](https://github.com/baditaflorin/mesh-rsvp/blob/main/package.json)
 [![license](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 
-> QR-invite RSVP — live attendance forecast and dietary tallies
+> QR-invite RSVP — a shared guest list that updates live, with no sign-up and no server
+
+**Try it in 30 seconds:** open the [live page](https://baditaflorin.github.io/mesh-rsvp/) in two browser tabs. Type a name and tap **✓ going** in one — the headcount and dietary tallies update in the other instantly. Share the invite QR to bring real guests into the same room.
 
 **Live → https://baditaflorin.github.io/mesh-rsvp/**
 

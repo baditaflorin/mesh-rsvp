@@ -10,6 +10,11 @@ const storagePrefix = pkg.name;
 test("A says going +2; B sees 3 attending", async ({ browser, baseURL }) => {
   const { a, b, cleanup } = await openTwoPeers(browser, baseURL ?? "", { storagePrefix });
   try {
+    // The in-app help explains the core "two tabs, same room, live" model.
+    await expect(a.getByText(/Everyone in the same room sees replies update live/i)).toBeVisible();
+    // RSVP buttons are gated on a name — the hint must tell the user why.
+    await expect(a.getByText("Enter your name to reply.")).toBeVisible();
+
     await a.getByPlaceholder("your name").fill("alice");
     await a.getByPlaceholder("+1s").fill("2");
     await a.getByPlaceholder("dietary (e.g. vegetarian, no nuts)").fill("vegetarian");
